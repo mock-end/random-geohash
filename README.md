@@ -27,7 +27,8 @@ var randomGeoHash = require('random-geohash');
 randomGeoHash();
 // => "h9xhn7y"
 ```
-By default, includes `7` characters of accuracy. Can override with the `length` option.
+
+By default, includes `7` characters of accuracy, can specify otherwise:
 
 
 ```js
