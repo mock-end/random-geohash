@@ -21,8 +21,10 @@ $ npm install --save random-geohash
 var randomGeoHash = require('random-geohash');
 
 // API
-// - randomGeoHash();
-// - randomGeoHash(length);
+// - randomGeoHash([options]);
+
+// options
+// - length
 
 randomGeoHash();
 // => "h9xhn7y"
@@ -32,7 +34,7 @@ By default, includes `7` characters of accuracy, can specify otherwise:
 
 
 ```js
-randomGeoHash(5)
+randomGeoHash({ length: 5 })
 // => "dr0kr"
 ```
 

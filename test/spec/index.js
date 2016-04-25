@@ -16,7 +16,14 @@ describe('random-geohash: ', function () {
       .and
       .to.be.match(/^[0123456789bcdefghjkmnpqrstuvwxyz]+$/);
 
-    expect(geohash(2))
+    expect(geohash({ length: 'asd' }))
+      .to.be.a('string')
+      .and
+      .to.have.length(7)
+      .and
+      .to.be.match(/^[0123456789bcdefghjkmnpqrstuvwxyz]+$/);
+
+    expect(geohash({ length: 2 }))
       .to.be.a('string')
       .and
       .to.have.length(2)

@@ -5,14 +5,20 @@ var randomChar = require('random-char');
 
 var pool = '0123456789bcdefghjkmnpqrstuvwxyz';
 
-module.exports = function (length) {
+module.exports = function (options) {
 
-  length = length && toInt(length) || 7;
+  var length = options && options.length || 7;
+
+  length = toInt(length);
+
+  if (isNaN(length) || !isFinite(length)) {
+    length = 7;
+  }
 
   var result = '';
 
   while (length--) {
-    result += randomChar(pool);
+    result += randomChar({ pool: pool });
   }
 
   return result;

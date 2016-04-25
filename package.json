@@ -1,6 +1,6 @@
 {
   "name": "random-geohash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate a random geohash.",
   "main": "index.js",
   "scripts": {
@@ -44,7 +44,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
-    "random-char": "^1.0.3",
+    "random-char": "^1.0.4",
     "to-integer": "^1.0.1"
   }
 }
